@@ -1,17 +1,5 @@
 import React from 'react';
 
-interface Props {
-    username: string;
-    name: string;
-    avatarUrl: string;
-    followers: number;
-    following: number;
-    company?: string;
-    location?: string;
-    email?: string;
-    blog?: string;
-}
-
 import { 
     Container,
     Flex,
@@ -24,6 +12,18 @@ import {
     EmailIcon,
     BlogIcon
 } from './styles';
+
+interface Props {
+    username: string;
+    name: string;
+    avatarUrl: string;
+    followers: number;
+    following: number;
+    company?: string;
+    location?: string;
+    email?: string;
+    blog?: string;
+}
 
 const ProfileDate: React.FC<Props> = ({
     username,
