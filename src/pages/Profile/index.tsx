@@ -20,10 +20,10 @@ const Profile: React.FC = () => {
             avatarUrl={'https://avatars.githubusercontent.com/u/69825217?v=4'}
             followers={5}
             following={5}
-            company={''}
+            company={'Prefeitura de BM'}
             location={'Barra Mansa, Rio de Janeiro'}
             email={'joao.teixeira@aedb.br'}
-            blog={''}
+            blog={'linkedin.com/in/joão-victor-martins-teixeira'}
           />
         </LeftSide>
 
