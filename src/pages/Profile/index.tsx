@@ -1,12 +1,14 @@
 import React from 'react';
 
 import ProfileDate from '../../components/ProfileDate';
+import RepoCard from '../../components/RepoCard';
 
 import { 
   Container,
   Main,
   LeftSide,
   RightSide,
+  Repos,
 } from './styles';
 
 const Profile: React.FC = () => {
@@ -28,7 +30,22 @@ const Profile: React.FC = () => {
         </LeftSide>
 
         <RightSide>
+          <Repos>
+            <h2>Random repos</h2>
 
+            <div>
+              {[1, 2, 3, 4, 5, 6].map(n => {
+                <RepoCard 
+                  key={n}
+                  username={'joaovictormartin'}
+                  reponame={'clone-github'}
+                  description={n % 3 === 0 ? 'JavaScript' : 'TypeScript'}
+                  start={8}
+                  forks={4}
+                />
+              })}
+            </div>
+          </Repos>
         </RightSide>
       </Main>
     </Container>
