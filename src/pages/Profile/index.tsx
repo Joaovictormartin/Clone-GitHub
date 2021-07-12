@@ -34,16 +34,17 @@ const Profile: React.FC = () => {
             <h2>Random repos</h2>
 
             <div>
-              {[1, 2, 3, 4, 5, 6].map(n => {
+              {[1, 2, 3, 4, 5, 6].map(n => (
                 <RepoCard 
-                  key={n}
-                  username={'joaovictormartin'}
-                  reponame={'clone-github'}
-                  description={n % 3 === 0 ? 'JavaScript' : 'TypeScript'}
-                  start={8}
-                  forks={4}
+                key={n}
+                username={'joaovictormartin'}
+                reponame={'clone-github'}
+                description={'Projeto feito em React JS usando TypeScript'}
+                language={n % 3 === 0 ? 'JavaScript' : 'TypeScript'}
+                stars={8}
+                forks={4}
                 />
-              })}
+              ))}
             </div>
           </Repos>
         </RightSide>

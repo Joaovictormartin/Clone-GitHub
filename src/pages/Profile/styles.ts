@@ -47,7 +47,8 @@ export const Repos = styled.div`
     grid-template-columns: 1fr;
 
     @media (min-width: 768px) {
-      grid-template-columns: 2fr;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: minmax(min-content, max-content)
     }
   }
 
