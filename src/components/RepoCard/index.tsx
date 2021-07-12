@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Container } from './styles';
+import { Container, TopSide, RepoIcon, BotSide, StarIcon, ForkIcon } from './styles';
 
 interface Props {
   username: string;
   reponame: string;
   description?: string;
   language?: string;
-  start: number;
+  stars: number;
   forks: number;
 }
 
@@ -16,12 +17,37 @@ const RepoCard: React.FC<Props> = ({
   reponame,
   description,
   language,
-  start,
+  stars,
   forks,
 }) => {
-  return(
+  const languageClasse = language ? language.toLowerCase() : 'other';
+
+  return (
     <Container>
-      
+      <TopSide>
+        <header>
+          <RepoIcon />
+          <Link to={`/${username}/${reponame}`}>{reponame}</Link>
+        </header>
+        <p>{description}</p>
+      </TopSide>
+
+      <BotSide>
+        <ul>
+          <li>
+            <div className={`language ${languageClasse}`} />
+            <span>{language}</span>
+          </li>
+          <li>
+            <StarIcon />
+            <span>{stars}</span>
+          </li>
+          <li>
+            <ForkIcon />
+            <span>{forks}</span>
+          </li>
+        </ul>
+      </BotSide>
     </Container>
   );
 }
