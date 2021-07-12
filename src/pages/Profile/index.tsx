@@ -2,6 +2,7 @@ import React from 'react';
 
 import ProfileDate from '../../components/ProfileDate';
 import RepoCard from '../../components/RepoCard';
+import RandomCalendar from '../../components/RandomCalendar';
 
 import { 
   Container,
@@ -9,6 +10,7 @@ import {
   LeftSide,
   RightSide,
   Repos,
+  CalendarHeading,
 } from './styles';
 
 const Profile: React.FC = () => {
@@ -47,6 +49,12 @@ const Profile: React.FC = () => {
               ))}
             </div>
           </Repos>
+
+          <CalendarHeading>
+            Random calendar (do not represent actual data)
+          </CalendarHeading>
+
+          <RandomCalendar />
         </RightSide>
       </Main>
     </Container>
