@@ -35,11 +35,11 @@ export const Flex = styled.div`
 `;
 
 export const Avatar = styled.img`
-  width: 16%;
+  width: 10%;
   border-radius: 50%;
 
   @media (min-width: 768px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 
