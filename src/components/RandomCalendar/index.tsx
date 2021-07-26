@@ -16,10 +16,10 @@ const RandomCalendar: React.FC = () => {
     <Container>
       <div className="wrapper">
         <HeatMap 
-          startDate={startDate}                   //Data inicial
-          endDate={endDate}                       //Data final
-          values={generateHeatmapValues(startDate,endDate)}          //commits
-          gutterSize={3.5}                        //Tamanho dos quadrados
+          startDate={startDate}                                        //Data inicial
+          endDate={endDate}                                           //Data final
+          values={generateHeatmapValues(startDate,endDate)}           //commits
+          gutterSize={3.5}                                            //Tamanho dos quadrados
           classForValue={(item : HeatmapValue) => {
             let clampedCount = 0;
 
