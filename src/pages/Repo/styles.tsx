@@ -44,7 +44,7 @@ export const Breadcrumb = styled.div`
   }
 `;
 
-export const Stats = styled.div`
+export const Stats = styled.ul`
   margin-top: 16px;
   display: flex;
   align-items: center;
@@ -53,11 +53,11 @@ export const Stats = styled.div`
     display: flex;
     align-items: center;
     margin-right: 9px;
-  }
 
-  > * {
+    > * {
     margin-right: 7px;
     color: var(--gray)
+  }
   }
 `;
 
