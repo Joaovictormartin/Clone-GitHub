@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom'
 
 import ProfileDate from '../../components/ProfileDate';
 import RepoCard from '../../components/RepoCard';
 import RandomCalendar from '../../components/RandomCalendar';
+import { ApiUser, ApiRepo } from '../../@types';
 
 import {
   Container,
@@ -15,7 +17,26 @@ import {
   Tab,
 } from './styles';
 
+interface Data {
+  user?: ApiUser;
+  repo?: ApiRepo[];
+  error?: string;
+}
+
 const Profile: React.FC = () => {
+
+  const [data, setData] = useState<Data>();
+  const { username = 'joaovictormartin' } = useParams()
+
+  useEffect(() => {
+    Promise.all([
+      //fetch(`https://api.github.com/users/${username}`),
+      //fetch(`https://api.github.com/users/${username}/repos`)
+    ])
+    .then(async (response) => {
+      //const [user]
+    })
+  }, []);
 
   const TabContent = () => (
     <div className="content">
