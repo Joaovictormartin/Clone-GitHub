@@ -72,6 +72,21 @@ export const BotSide = styled.div`
     &.typescript {
       background: var(--typescript);
     }
+    &.null {
+      background: var(--php);
+    }
+    &.html {
+      background: var(--html);
+    }
+    &.c {
+      background: var(--c);
+    }
+    &.ejs {
+      background: var(--ejs);
+    }
+    &.java {
+      background: var(--java);
+    }
   }
 `;
 
