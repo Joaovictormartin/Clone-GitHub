@@ -1,5 +1,12 @@
 import styled, { css } from 'styled-components';
-import { RiGroupLine, RiBuilding4Line, RiMapPin2Line, RiMailLine, RiLinksLine} from 'react-icons/ri';
+import { 
+  RiGroupLine, 
+  RiBuilding4Line, 
+  RiMapPin2Line, 
+  RiMailLine, 
+  RiLinksLine, 
+  RiStarSLine 
+} from 'react-icons/ri';
 
 export const Container = styled.div``;
 
@@ -30,6 +37,15 @@ export const Flex = styled.div`
     > div {
       margin-left: 0;
       margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      > h1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
   } 
 `;
@@ -80,7 +96,21 @@ export const Column = styled.ul`
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  a {
+    margin-left: 5px;
+    
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
+
 
 const iconCSS = css`
   width: 16px;
@@ -91,6 +121,8 @@ const iconCSS = css`
 
 export const PeopleIcon = styled(RiGroupLine)`${iconCSS}`;
 
+export const StarIcon = styled(RiStarSLine)`${iconCSS}`;
+
 export const CompanyIcon = styled(RiBuilding4Line)`${iconCSS}`;
 
 export const LocationIcon = styled(RiMapPin2Line)`${iconCSS}`;
@@ -99,4 +131,3 @@ export const EmailIcon = styled(RiMailLine)`${iconCSS}`;
 
 export const BlogIcon = styled(RiLinksLine)`${iconCSS}`;
 
-    

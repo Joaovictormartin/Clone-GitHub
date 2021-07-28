@@ -3,7 +3,8 @@ export interface ApiUser {
   name: string;
   followers: number;
   following: number;
-  publi_repos: number;
+  star: number;
+  public_repos: number;
   avatar_url: string;
   blog?: string
   company?: string

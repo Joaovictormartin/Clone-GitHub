@@ -10,7 +10,8 @@ import {
     CompanyIcon,
     LocationIcon,
     EmailIcon,
-    BlogIcon
+    BlogIcon,
+    StarIcon
 } from './styles';
 
 interface Props {
@@ -19,6 +20,7 @@ interface Props {
     avatarUrl: string;
     followers: number;
     following: number;
+    star: number;
     company?: string;
     location?: string;
     email?: string;
@@ -31,6 +33,7 @@ const ProfileDate: React.FC<Props> = ({
     avatarUrl,
     followers,
     following,
+    star,
     company,
     location,
     email,
@@ -57,6 +60,11 @@ const ProfileDate: React.FC<Props> = ({
                 <li>
                     <b>{following}</b>
                     <span>following</span>
+                    <span>·</span>
+                </li>
+                <li>
+                    <StarIcon />
+                    <b>{star}</b>
                 </li>
             </Row>
 
