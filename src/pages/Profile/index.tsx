@@ -63,7 +63,7 @@ const Profile: React.FC = () => {
     <div className="content">
       <RepoIcon />
       <span className="label">Repositories</span>
-      <span className="number">7</span>
+      <span className="number">{data.user?.public_repos}</span>
     </div>
   );
 
@@ -81,10 +81,11 @@ const Profile: React.FC = () => {
         <LeftSide>
           <ProfileDate
             username={data.user.login}
-            name={data.user.login}
+            name={data.user.name}
             avatarUrl={data.user.avatar_url}
             followers={data.user.followers}
             following={data.user.following}
+            star={0}
             company={data.user.company}
             location={data.user.location}
             email={data.user.email}
