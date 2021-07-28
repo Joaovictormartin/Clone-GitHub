@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { 
   Container, 
@@ -13,38 +13,41 @@ import {
 } from './styles';
 
 const Repo: React.FC = () => {
+
+  const { username = 'joaovictormartin', reponame="/" } = useParams()
+
   return (
     <Container>
       <Breadcrumb>
         <RepoIcon />
 
-        <Link className={'username'} to={'/joaovictormartin'}>
-          joaovictormartin
+        <Link className={'username'} to={`/${username}`}>
+          {username}
         </Link>
 
         <span>/</span>
 
-        <Link className={'reponame'} to={'/joaovictormartin/clone-github'}>
-          clone-github
+        <Link className={'reponame'} to={`/${username}/${reponame}`}>
+          {reponame}
         </Link>
       </Breadcrumb>
 
-      <p>Projeto feito em React JS usando TypeScript</p>
+      <p>{}</p>
 
       <Stats>
         <li>
           <StatsIcon />
-          <b>8</b>
-          <span>stars</span>
+          <b>{}</b>
+          <span>{}</span>
         </li>
         <li>
           <ForkIcon />
-          <b>4</b>
-          <span>forks</span>
+          <b>{}</b>
+          <span>{}</span>
         </li>
       </Stats>
 
-      <LinkButton href={'https://github.com/Joaovictormartin/Clone-GitHub'}>
+      <LinkButton href={`https://github.com/${username}/${reponame}`}>
         <GithubIcon />
         <span>View on Github</span>
       </LinkButton>
